@@ -1,0 +1,118 @@
+:root {
+    --color1:  #020d15;
+    --color2:  #223340;
+    --color3:  #416274;
+    --color4:  #659ab2;
+    --color5:  #8eddfa;
+    --color6:  #ffa600;
+    --font: 'Source Sans Pros'
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li,a,i,ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color2);
+}
+
+.nav__logo {
+    padding: 8px 24px;
+    color: var(--color6);
+}
+
+.nav__logo a{
+    color: white;
+    font-size: 24px;
+
+}
+
+.nav__menu {
+    display: flex;
+}
+
+.nav__menu li {
+    padding: 8px 24px;
+}
+.nav__menu li:hover {
+    background-color: var(--color5);
+    border-radius: 5px;
+
+}
+
+.nav__menu li:hover a{
+    color: black;
+}
+
+.nav__menu li a{
+    color: white;
+
+}
+
+.nav__icons {
+    display: flex;
+    padding: 8px 12px;
+}
+
+.nav__icons li {
+    color: var(--color6);
+    padding: 8px 12px;
+    cursor: pointer;
+
+}
+
+.nav__line {
+    display: none;
+}
+
+@media screen and (max-width:780px){
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav__menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav__menu li {
+        text-align: center;
+        margin: 0px 10px 0px 10px;
+    }
+    
+    .nav__icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+    .nav__line {
+        display: block;
+        position: absolute;
+        right: 5px;
+        padding: 8px 24px;
+        color: var(--color6);
+        cursor: pointer;
+    }
+
+    .nav__menu.active,
+    .nav__icons.active {
+        display: flex;
+    }
+
+}
+
+

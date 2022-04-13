@@ -1,0 +1,135 @@
+:root {
+    --color1:  #020d15;
+    --color2:  #223340;
+    --color3:  #416274;
+    --color4:  #659ab2;
+    --color5:  #8eddfa;
+    --color6:  #ffa600;
+    --font: 'Source Sans Pros';
+}
+
+
+* {margin:0; list-style: none;}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 24px;
+    background-color: var(--color2);
+}
+
+.navbar_logo i{
+    color: var(--color6);
+}
+.navbar_logo a{
+    size: 20px;
+    color: white;
+}
+
+a, i li{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar_menu {
+    display: flex;
+}
+.navbar_menu li a,
+.navbar_logo a {
+    color: white;
+}
+
+.navbar_menu li {
+    padding: 24px 24px;
+}
+
+.navbar_menu li:hover {
+    background-color: var(--color5);
+    border-radius: 5px;
+    transition: 500ms;
+
+}
+.navbar_menu li:hover a{
+    color: black;
+    transition: 500ms;
+}
+
+.navbar_icons {
+    display: flex;
+}
+.navbar_icons li{
+    padding: 8px 12px;
+    color: white;
+}
+.navbar_icons li a{
+    color: white;
+}
+
+.nav_hamburger {
+    display: none;
+}
+
+
+
+.about {
+    position: flex;
+    padding: 8px 24px;
+}
+
+.about_text{
+    margin: 100px 150px;
+    padding: 25px 25px;
+}
+
+@media screen and (max-width:780px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 24px;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .navbar_menu li{
+        padding: 12px ;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .navbar_icons {
+        display: none;
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+
+    }
+    .navbar_icons li{
+        padding-left: 0;
+
+    }
+    .nav_hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        color: var(--color6);
+        cursor: pointer;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+
+    .about_text {
+        padding: 10px 10px;
+        margin: 20px;
+    }
+
+}
